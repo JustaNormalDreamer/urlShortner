@@ -13,8 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::get('redirect/{shortner}', 'UrlRedirectController@index')->name('urls.shortner.redirect');
+
 Route::get('/{any?}', function () {
     return view('index');
 })->where(['any' => '.*']);
-
-Route::get('urls/{shortner}', 'UrlRedirectController@index')->name('urls.shortner.redirect');

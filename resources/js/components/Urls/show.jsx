@@ -23,6 +23,8 @@ const ShowUrl = (props) => {
                                 <th>Name</th>
                                 <th>Url</th>
                                 <th>Shortner</th>
+                                <th>View</th>
+                                <th>View with Redirect</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -31,6 +33,8 @@ const ShowUrl = (props) => {
                                 <td>{url.name}</td>
                                 <td>{url.url}</td>
                                 <td>{url.minify}</td>
+                                <td><a href={url.url} className={"btn btn-info"}>View</a></td>
+                                <td><a href={`/redirect/${url.minify}`} className={"btn btn-info"}>View Redirect</a></td>
                             </tr>
                         </tbody>
                     </table>

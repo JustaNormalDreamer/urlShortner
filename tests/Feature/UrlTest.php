@@ -24,7 +24,7 @@ class UrlTest extends TestCase
                 'attributes' => [
                     'id' => 1,
                     'name' => 'Test Url',
-                    'url' => 'www.thetechlink.com'
+                    'url' => 'http://www.thetechlink.com'
                 ]
             ]
         ]);
@@ -32,7 +32,7 @@ class UrlTest extends TestCase
         $this->assertDatabaseHas('urls', [
             'id' => 1,
             'name' => 'Test Url',
-            'url' => 'www.thetechlink.com'
+            'url' => 'http://www.thetechlink.com'
         ]);
     }
 
@@ -62,14 +62,14 @@ class UrlTest extends TestCase
     public function test_it_redirects_to_the_original_url_when_a_shortner_is_requested()
     {
         $url = Url::factory()->create();
-        $this->get("/urls/{$url->minify}")->assertRedirect($url->url);
+        $this->get("/redirect/{$url->minify}")->assertRedirect($url->url);
     }
 
     private function urlData()
     {
         return [
             'name' => 'Test Url',
-            'url' => 'www.thetechlink.com',
+            'url' => 'http://www.thetechlink.com',
         ];
     }
 }
