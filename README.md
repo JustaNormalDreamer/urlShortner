@@ -14,7 +14,7 @@ A URL shortner created using Laravel and React Js for frontend scaffolding. The 
   <li> "npm run dev" for developing to a dev environment </li>
 </ul>
 
-Visit the following URL http://127.0.0.1:8000, here a react scafolded app will be shown. From this form you can store any number of records. 
+Visit the following URL http://127.0.0.1:8000, here a react scaffold app will be shown. From this form you can store any number of records. 
 Once created you are redirected towards a table showing its content.
 
 The react app works with an API provided from api.php in the route directory, and the related controller. A post and get request can be used to view and create a record. 

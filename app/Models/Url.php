@@ -10,6 +10,6 @@ class Url extends Model
     use HasFactory;
 
     protected $fillable = [
-      'name', 'url', 'minify'
+      'name', 'url', 'minify', 'redirected'
     ];
 }

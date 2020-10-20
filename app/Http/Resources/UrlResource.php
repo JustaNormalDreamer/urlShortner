@@ -20,6 +20,7 @@ class UrlResource extends JsonResource
               'name' => $this->name,
               'url' => $this->url,
               'minify' => $this->minify,
+              'redirected' => $this->redirected,
               'created_at' => $this->created_at,
               'updated_at' => $this->updated_at
           ]

@@ -18,6 +18,7 @@ class CreateUrlsTable extends Migration
             $table->string('name');
             $table->string('url');
             $table->string('minify')->unique();
+            $table->unsignedInteger('redirected')->default(0);
             $table->timestamps();
         });
     }

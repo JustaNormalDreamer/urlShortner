@@ -49,7 +49,8 @@ class UrlTest extends TestCase
                     'id' => $url->id,
                     'name' => $url->name,
                     'url' => $url->url,
-                    'minify' => $url->minify
+                    'minify' => $url->minify,
+                    'redirected' => 0
                 ]
             ]
         ]);
